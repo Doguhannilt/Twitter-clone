@@ -9,6 +9,8 @@ import connectDB from './models/connectMongoDB.js'
 import authRoutes from './routes/authRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import postRoutes from './routes/postRoutes.js'
+import notificationRoutes from './routes/notificationRoutes.js'
+
 // Cloudinary
 import {v2 as cloudinary} from 'cloudinary'
 
@@ -31,6 +33,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
 app.use("/api/posts", postRoutes)
+app.use("/api/notifications", notificationRoutes)
 
 
 
