@@ -8,7 +8,8 @@ import connectDB from './models/connectMongoDB.js'
 // Routes
 import authRoutes from './routes/authRoutes.js'
 import userRoutes from './routes/userRoutes.js'
-
+import postRoutes from './routes/postRoutes.js'
+// Cloudinary
 import {v2 as cloudinary} from 'cloudinary'
 
 dotenv.config()
@@ -29,6 +30,7 @@ app.use(express.urlencoded({ extended: true }))
 {/* Routes */}
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
+app.use("/api/posts", postRoutes)
 
 
 
